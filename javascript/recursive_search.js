@@ -1,5 +1,7 @@
-function recursiveSearch(arr, target) {
-  // type your code here
+const recursiveSearch = (arr, target) => {
+  if (arr.length > 0 && arr[0] === target) return true
+  else if (arr.length > 0) return recursiveSearch(arr.slice(1), target)
+  return false
 }
 
 if (require.main === module) {
